@@ -1,0 +1,11 @@
+git [33mcommit 150295eb40442dab353e5ddb8b3e380d36a6dc9d[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Jordan Corrêa <101840416+JdrNc@users.noreply.github.com>
+Date:   Sat Dec 20 20:02:17 2025 +0000
+
+    Deploy to vercel
+
+[33mcommit 3337bdaca72aa03f4b290f56c007ee8835ea9480[m
+Author: Jordan Corrêa <101840416+JdrNc@users.noreply.github.com>
+Date:   Sat Dec 20 12:33:11 2025 -0300
+
+    Initial commit
