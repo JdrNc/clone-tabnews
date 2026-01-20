@@ -19,8 +19,16 @@ const connectionObj = {
   host: process.env.POSTGRES_HOST,
   port: process.env.POSTGRES_PORT,
   database: process.env.POSTGRES_DB,
-  ssl: process.env.NODE_ENV === "development" ? false : true,
+  ssl: getSSLValues(),
 };
 export default {
   query: query,
 };
+function getSSLValues() {
+  if (process.env.POSTGRES_CA) {
+    return {
+      ca: process.env.POSTGRES_CA,
+    };
+  }
+  return process.env.NODE_ENV === "development" ? false : true;
+}
