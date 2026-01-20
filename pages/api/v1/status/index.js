@@ -13,8 +13,6 @@ async function status(request, response) {
   });
   const { opened_connections } = openedConnectionsResult.rows[0];
 
-  console.log(opened_connections);
-
   response.status(200).json({
     update_at: updateAt,
     dependencies: {

@@ -2,11 +2,14 @@ import { Client } from "pg";
 
 async function query(queryObject) {
   const client = new Client(connectionObj);
-  await client.connect();
+  console.log("Credenciais do PostGres:", connectionObj);
   try {
+    await client.connect();
     const result = await client.query(queryObject);
     return result;
   } catch (error) {
+    console.error(error);
+    throw error;
   } finally {
     await client.end();
   }
