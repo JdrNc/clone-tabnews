@@ -2,7 +2,6 @@ import { Client } from "pg";
 
 async function query(queryObject) {
   const client = new Client(connectionObj);
-  console.log("Credenciais do PostGres:", connectionObj);
   try {
     await client.connect();
     const result = await client.query(queryObject);
@@ -20,6 +19,7 @@ const connectionObj = {
   host: process.env.POSTGRES_HOST,
   port: process.env.POSTGRES_PORT,
   database: process.env.POSTGRES_DB,
+  ssl: process.env.NODE_ENV === "development" ? false : true,
 };
 export default {
   query: query,
