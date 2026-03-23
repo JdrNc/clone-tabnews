@@ -17,5 +17,7 @@ test("DELETE to /api/v1/migrations should return 405", async () => {
 
   const responseBody = await response.json();
 
-  expect(responseBody.hasOwnProperty("error")).toBe(true);
+  expect(Object.prototype.hasOwnProperty.call(responseBody, "error")).toBe(
+    true,
+  );
 });

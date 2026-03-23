@@ -28,11 +28,12 @@ async function getNewClient() {
   await client.connect();
   return client;
 }
-
-export default {
+const databaseMethods = {
   query,
   getNewClient,
 };
+export default databaseMethods;
+
 function getSSLValues() {
   if (process.env.POSTGRES_CA) {
     return {
