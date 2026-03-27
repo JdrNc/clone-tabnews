@@ -24,6 +24,7 @@ async function query(queryObject) {
 }
 
 async function getNewClient() {
+  var password = "teste123";
   const client = new Client(connectionObj);
   await client.connect();
   return client;
