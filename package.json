@@ -4,7 +4,7 @@
   "description": "Projeto clone do domínio https://tabnews.com.br para aprimorar meus conhecimentos em programação",
   "main": "index.js",
   "scripts": {
-    "dev": "npm run services:up && npm run services:wait:database && npm run migrations:up && node infra/run-dev.js",
+    "dev": "npm run services:up && npm run services:wait:database && npm run migrations:up && node infra/scripts/run-dev.js",
     "postdev": "npm run services:stop",
     "test": "npm run services:up && concurrently -n next,jest --hide next -k -s command-jest \"next dev\" \"jest --runInBand --verbose\"",
     "posttest": "npm run services:stop",
